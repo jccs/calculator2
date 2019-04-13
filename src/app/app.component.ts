@@ -13,6 +13,7 @@ export class AppComponent {
   val1 = 0;
   val2 = 0;
   dec = 1;
+  estaAutenticado:boolean = false;
 
   obtenerNumero(numero: number){
     if (this.dec !== 1) {
@@ -73,5 +74,9 @@ export class AppComponent {
     this.operacion = '%%';
     this.init = 'S';
     this.dec = 1;
+  }
+
+  autenticar(){
+    this.estaAutenticado = !this.estaAutenticado;
   }
 }
